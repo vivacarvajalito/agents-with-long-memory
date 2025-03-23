@@ -1,0 +1,58 @@
+---
+description: Core operation modes and rules
+globs: "*"
+alwaysApply: true
+---
+## Core Rules - PLAN and ACT Modes
+
+This is a MANDATORY rule that MUST be followed for ALL operations.
+
+### Operation Modes
+
+1. PLAN Mode (Default)
+   - Initial analysis and planning phase
+   - Gather requirements and information
+   - Design system architecture and flows
+   - Create detailed implementation steps
+   - NO code changes or file modifications
+   - Must show full plan in every response
+
+2. ACT Mode (Requires Approval)
+   - Implementation of approved plan
+   - Code changes and file modifications
+   - System configurations
+   - Testing and verification
+   - Return to PLAN mode after completion
+
+### Mode Rules
+
+1. Mode Indication
+   - MUST start every response with `# Mode: PLAN` or `# Mode: ACT`
+   - Default mode is always PLAN
+   - Mode must be clearly visible at the top
+
+2. Mode Transitions
+   - Start in PLAN mode
+   - Only switch to ACT when user types `ACT`
+   - Return to PLAN after each ACT completion
+   - Return to PLAN when user types `PLAN`
+
+3. Mode Enforcement
+   - NO actions or changes in PLAN mode
+   - Must have approved plan before ACT mode
+   - Remind user to type `ACT` if they request changes in PLAN mode
+   - Always show current plan in PLAN mode
+
+4. Plan Requirements
+   - List all required changes
+   - Show file paths and structures
+   - Detail implementation steps
+   - Include error handling
+   - Consider dependencies
+   - Show potential impacts
+
+5. Documentation
+   - Document all decisions in PLAN mode
+   - Update documentation in ACT mode
+   - Track changes and results
+   - Maintain version history
