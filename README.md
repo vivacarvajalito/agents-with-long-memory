@@ -1,28 +1,44 @@
 # Car Recommendation Agent with Memory
 
-An intelligent car recommendation agent that remembers past recommendations and
-can recall them by date or context.
+An intelligent car recommendation agent built with Mastra.ai that demonstrates
+advanced AI capabilities through long-term memory and contextual awareness.
 
-## Features
+## Project Overview
 
-- Interactive car recommendations based on user needs
-- Persistent memory of all recommendations
-- Query past recommendations by date or context
-- Automatic semantic search using LibSQL vector store
-- Built with Mastra.ai framework
+This project showcases the power of AI agents with persistent memory in a
+real-world application. The agent:
+
+- Provides personalized car recommendations based on user requirements
+- Maintains long-term memory of all interactions and recommendations
+- Can recall past recommendations through semantic search
+- Uses Mastra's network capabilities for intelligent agent routing
+- Demonstrates practical implementation of AI memory systems
 
 ## Setup
 
-1. Install dependencies:
+1. Install Node.js:
+   - Required: Node.js v22 LTS
+   - Download from: https://nodejs.org/
+
+2. Install dependencies:
 
 ```bash
-bun install
+npm install
 ```
 
-2. Start the agent:
+3. Create `.env.development`:
+
+```env
+# Choose one:
+GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
+# OR
+OPENAI_API_KEY=your_openai_api_key
+```
+
+4. Start the agent:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 ## Usage
@@ -34,9 +50,27 @@ bun run dev
    - "What similar cars have you recommended before?"
    - "What was your recommendation last Friday?"
 
-## Technical Details
+## Technical Implementation
 
-- Uses Mastra's Memory system with LibSQL for storage
-- FastEmbed (bge-small-en-v1.5) for semantic embeddings
-- Automatic metadata tracking with timestamps
-- Semantic search for context-based queries
+- **Agent Network**: Uses Mastra's network capabilities to route queries to
+  specialized agents
+- **Long-term Memory**:
+  - LibSQL vector store for semantic search
+  - FastEmbed (bge-small-en-v1.5) for embeddings
+  - Persistent storage of all recommendations
+- **Semantic Search**: Enables natural language queries about past
+  recommendations
+- **Metadata Tracking**: Automatically stores timestamps and context
+
+## Project Goals
+
+This project demonstrates key AI capabilities required for the AI Academy:
+
+1. **Agent Networks**: Shows understanding of multi-agent systems
+2. **Memory Systems**: Implements persistent memory for AI agents
+3. **Natural Language**: Handles complex queries about past interactions
+4. **Real-world Application**: Practical use case with car recommendations
+
+The project is actively being developed to showcase how AI agents can maintain
+context over long periods, making it an ideal demonstration of advanced AI
+capabilities.
